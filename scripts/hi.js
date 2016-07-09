@@ -15,7 +15,7 @@ module.exports = function(robot) {
     msg.send("bye bye from hubot!");
   });
 
-  robot.respond(/hello/i, fucntion(msg) {
+  robot.respond(/hello/i, function(msg) {
     msg.send("Hola!");
   });
 
