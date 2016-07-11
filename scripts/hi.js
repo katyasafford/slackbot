@@ -16,7 +16,7 @@ module.exports = function(robot) {
   });
 
   robot.respond(/hello/i, function(msg) {
-    msg.send("Hola!");
+    msg.send("http://38ccda.medialib.glogster.com/media/650b48a16f03fe794640a00af0b4453a284d0ba0d6cce58e9c599fc5394447a0/big-bend-picture2.jpg");
   });
 
 //to look for help: run bin/hubot and then type Mr Bot help
