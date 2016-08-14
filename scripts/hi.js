@@ -4,6 +4,8 @@
 
 //to make code work push it and
 //after git push - DO git push heroku master
+//
+//to wake up bot -> type heroku open in slackbot folder
 
 const https = require('https');
 
