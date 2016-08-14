@@ -21,8 +21,11 @@ module.exports = function(robot) {
     msg.send("http://38ccda.medialib.glogster.com/media/650b48a16f03fe794640a00af0b4453a284d0ba0d6cce58e9c599fc5394447a0/big-bend-picture2.jpg");
   });
 
-  robot.respond(/nirvana/i, function(msg) {
-    https.get('https://api.spotify.com/v1/search?q=nirvana&type=artist', function(response) {
+  robot.respond(/spotify play (.*)/i, function(msg) {
+    console.log(msg.match);
+    //https.get('https://api.spotify.com/v1/search?q=nirvana&type=artist', function(response) {
+    var artist = msg.match[1];
+      https.get('https://api.spotify.com/v1/search?q=' + artist + '&type=artist', function(response) {
         // Continuously update stream with data
         var body = '';
         response.on('data', function(d) {
